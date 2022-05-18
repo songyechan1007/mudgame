@@ -1,0 +1,13 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.syc.dao.InventoryDao">
+	<select id="selectInventory" resultType="org.syc.dto.InventoryDTO">
+		select *
+		from inventory as inv, items as it
+		where inv.itemCode = it.itemCode and inv.id = #{id};
+	</select>
+	<insert id="addInventory">
+		insert into inventory (id,itemName,itemCode,playerId,itemStr,itemAmr,itemHp)values(#{id},#{itemName},#{itemCode},#{id},#{itemStr},#{itemAmr},#{itemHp});
+	</insert>
+</mapper>

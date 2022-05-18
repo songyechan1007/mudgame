@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+
+button:hover{
+	cursor: pointer;	
+}
+
+.main .mainCenter{
+	width: 45%;
+	box-sizing: border-box;
+}
+
+.freeboardTitle{
+	width:100%; 
+	box-sizing:border-box; 
+	height: 40px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	border: none;
+	border-bottom: 1px solid #888; 
+	padding: 5px;
+	outline: none;
+}
+
+
+.writeForm, .detailForm{
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	padding: 10px;
+	margin-top: 10px;
+	height: 80%;
+	border-radius: 10px;
+}
+
+.detailForm{
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.detailForm .buttons{
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.detailForm .buttons button{
+	border: none;
+	background-color: yellowgreen;
+	padding: 5px;
+	width: 20%;
+	border-radius: 5px;
+}
+.freeboardTop, .detailTop{
+	display: flex;
+	justify-content: space-between;
+}
+
+.detailTop{
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 10px;
+	height: 35px;
+}
+
+.detailTop h2{
+	font-size: 22px;
+	line-height: 1em;
+}
+
+.detailTop input{
+	font-size: 22px;
+	line-height: 1em;
+	font-weight: bold;
+	outline: none;
+	border: none;
+}
+
+.detailTop p{
+	font-size: 12px;
+	vertical-align: top;
+}
+
+
+.replys{
+	position: absolute;
+	bottom: 50px;
+	width: 97%;
+	padding-top: 10px;
+	border-top: 1px solid #222;
+}
+
+.replys ul{
+	display: flex;
+	justify-content: space-around;
+}
+
+.replys a:hover{
+	cursor: pointer;
+}
+
+
+.freeboardTop button{
+	border: none;
+	background-color: yellowgreen;
+	width: 40px;
+	vertical-align: top;
+}
+
+.freeboardImgDiv{
+	height: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.imgs{
+	margin-bottom: 10px;
+	width: 93%; 
+	height: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid #888;
+	outline: none;
+}
+
+.imgUpload{
+	width: 40px; 
+	height: 100%;
+	vertical-align: top;
+	border: none;
+	background-color: yellowgreen;
+}
+
+.imgShow{
+	margin-bottom: 10px;
+}
+
+.freeboardContent{
+	outline: none; 
+	border: none;
+	resize: none;
+}
+
+.freeboardTable{
+	width: 100%;
+	text-align: center;
+	border: 0;
+	border-collapse : collapse;
+	border-spacing : 0;
+}
+
+
+.freeboardTable thead tr{
+	background-color: #ccc;
+	width: 100%;
+}
+
+.freeboardTable thead th{
+	padding: 5px 0 5px 0;
+	border-top:1px solid #383838;
+	border-bottom:1px solid #e5e5e5;
+}
+
+.freeboardTable tbody tr{
+	background-color: #fff;
+}
+
+.freeboardTable tbody td{
+	padding: 10px 0 10px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.freeboardTable tbody tr:hover{
+	background-color: rgb(246,247,251);
+	cursor: pointer;
+}
+
+.closed, .closeImg{
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+.closed:hover{
+	cursor:pointer;
+}
+
+.contentText{
+	outline: none;
+	border: none;
+	resize: none;
+}
+.pager{
+	width: 100%;
+	text-align: center;
+}
+
+.replyEditor{
+	margin-top: 10px;
+	width: 100%;
+	height: 80px;
+}
+
+.replyEditor textarea{
+	outline: none;
+	resize: none;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+/* 모달창 */
+.moreReplyForm{
+	width: 626px;
+	height: 250px;
+	margin: 0 auto;
+	position: fixed;
+	padding: 10px;
+	top: 50%;
+	left: 50%;
+	margin-left: -287px;
+	margin-top: -125px;
+	background-color: #F5F5DC;
+	border-radius: 10px;
+	display: none;
+	
+}
+
+.moreReplyForm .close{
+	border: none;
+	background-color: transparent;
+	color: red;
+	position: absolute;
+	right: 0;
+	top: -20px;
+}
+
+
+.moreReplys{
+	overflow-y: auto;
+	height: 100%;
+}
+
+.moreReplys ul{
+	display:flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+	border-bottom: 1px solid #ccc;
+	line-height: 1em;
+	align-items: center;
+	padding-bottom: 10px;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.moreReplys li:nth-child(4), .moreReplys li:nth-child(5){
+	margin-top: 7px;
+}
+
+.moreReplys li:nth-child(4){
+	margin-right: 10px;
+}
+
+.moreReplys li:nth-child(5){
+	margin-right: 40px;
+}
+
+.moreReplys .moreReplyLi{
+	width: 33.3%;
+}

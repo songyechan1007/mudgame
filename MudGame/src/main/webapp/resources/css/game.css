@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+#gameInbtn{
+	color: blue;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#createBrood{
+	color: blue;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.broodName{
+	text-align: center;
+	font-size: 12px;
+}
+
+.chooseBrood{
+	display:flex;
+}
+.chooseOrc{
+	display:block;
+}
+
+.chooseElf{
+	display: none;
+}
+
+.elfBtn{
+	width: 100%;
+	height: 30px;
+}
+.orcBtn{
+	width: 100%;
+	height: 30px;
+}
+
+.createPlayer{
+	background-color: rgb(239,239,239);
+	border: 1px solid #888;
+	border-radius: 2px;
+	color: #222;
+}
+
+.createPlayer:hover{
+	text-decoration: none;
+	color: yellowgreen;
+}
+
+.playerName{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#firstText{
+	height: 100%;
+	width: 100%;
+}
+
+.mainGameDisplay{
+	width:100%;
+	height: 50%;
+}
+
+.mainGameDisplay td:hover{
+	cursor: pointer;
+}
+
+.mainBroodImage{
+	height: 100%;
+	width: 100%;
+}
+
+.mainBroodImage .mainOrcImage, .mainBroodImage .mainElfImage{
+	height: 100%;
+	width: 100%;
+}
+
+
+/* 사냥터 가기 버튼 클릭시 디스플레이*/
+
+.huntingDisplay{
+	background-color: #222;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	padding: 0px 20px 0px 20px;
+	box-sizing: border-box;
+	
+}
+/* 사냥터 선택 글씨 */
+.chooseHunting{
+	text-align: center;
+	padding-top: 40px;
+}
+
+.chooseHuntingImage{
+	width: 100%;
+	height: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+
+.huntingImageDiv{ 
+	margin: 2px 2px 2px 2px;
+	width: 31%;
+	height: 30%;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.huntingImageDiv:hover{
+	cursor: pointer;
+}
+
+.huntingImageImg{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.huntingImageFont{
+	position: absolute;
+	top: 40%;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	font-size: 8px;
+	font-weight: bold;
+	color: #fff;
+}
+.h41-50{
+	color: #222;
+}
+
+
+.goButton{
+	margin-bottom: 10px;
+	width: 100%;
+	height: 7%;
+	box-sizing: border-box;
+	border: none;
+}
+
+.goButton:hover{
+	cursor: pointer;
+}
+
+.clearFont{
+	width: 100%;
+	margin-bottom: 20px;
+	display:block;
+	text-align: center;
+	font-size: 30px;
+	line-height: 1em;
+}
+
+.mainGameDisplay{
+	position: relative;
+}
+
+.coinImage{
+	position:absolute;
+	bottom: 10px;
+	display:flex;
+}
+
+.coinImage .goldFont{
+	white-space: nowrap;
+	margin-left: 20px;
+}
+
+.coinImage span{
+	white-space: nowrap;
+	color: #fff;
+}
+
+.chStateUl{
+	white-space: nowrap;
+}
+
+.stateInformation{
+	padding: 20px 20px 0 20px;
+	color:#fff;
+}
+
+/* 상점 */
+
+.selectItemPrice{
+	color: #fff;
+	margin-left: 5px;
+	position: absolute;
+	bottom: 40px;
+}
+
+.buyItem{
+	border: none;
+	outline: none;
+}
+
+.itemListTable img, .itemListTable td{
+	cursor: pointer;
+}
+
+.shopFont{
+	color: #fff;
+	width: 100%;
+	text-align: center;
+}

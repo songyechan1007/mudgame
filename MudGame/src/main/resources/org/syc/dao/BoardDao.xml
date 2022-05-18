@@ -1,0 +1,100 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.syc.dao.BoardDao">
+	<select id="freeBoard" resultType="org.syc.dto.BoardDTO">
+	
+	select *
+	from(
+		select @rownum:=@rownum+1 as rownum,b.*
+		from (select @rownum:=0) as tmp, board as b
+		<if test="type != null">
+			<choose>
+				<when test="type == 't'.toString()">
+					where title like concat('%',#{keyword},'%')
+				</when>
+				<when test="type == 'i'.toString()">
+					where id like concat('%',#{keyword},'%') 
+				</when>
+				<when test="type == 'c'.toString()">
+					where content like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					where title like concat('%',#{keyword},'%') or content like concat('%',#{keyword},'%')
+				</otherwise>
+			</choose>	
+		</if>
+		order by bno desc
+) as boardList
+<![CDATA[
+		where rownum > (#{pagenum}-1) * #{amount} and rownum <= #{pagenum} * #{amount}
+		]]>
+	</select>
+	
+	<select id="getTotalCount" resultType="int">
+	select count(*)
+	from board
+	<if test="type != null">
+			<choose>
+				<when test="type == 't'.toString()">
+					where title like concat('%',#{keyword},'%')
+				</when>
+				<when test="type == 'i'.toString()">
+					where id like concat('%',#{keyword},'%') 
+				</when>
+				<when test="type == 'c'.toString()">
+					where content like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					where title like concat('%',#{keyword},'%') or content like concat('%',#{keyword},'%')
+				</otherwise>
+			</choose>	
+		</if>
+	
+	</select>
+	
+	<insert id="freeBoardWrite">
+		insert into board(title,content,id,camp,imgSrc) values(#{title},#{content},#{id},#{camp},#{imgSrc});
+	</insert>
+	
+	<select id="freeBoardDetailGet" resultType="org.syc.dto.BoardDTO">
+		select * from board where bno = #{bno}
+	</select>
+	
+	<select id="freeBoardModifyGet" resultType="org.syc.dto.BoardDTO">
+		select * from board where bno = #{bno}
+	</select>
+	
+	
+	<update id="freeboardMoidfyUpdate">
+		update board set title = #{title}, content = #{content}, imgSrc = #{imgSrc} where bno = #{bno}
+	</update>
+	
+	<delete id="freeBoardRemove">
+		delete from board where bno = #{bno}
+	</delete>
+	
+	<select id ="freeBoardDetailReply" resultType="org.syc.dto.ReplyDTO">
+		select * from reply where bno = #{bno} order by rNo desc;
+	</select>
+	
+	<insert id ="replyWrite">
+		insert into reply(rId,rContent,bno) values(#{rId},#{rContent},#{bno}); 
+	</insert>
+	
+	<select id ="freeBoardReplyGet" resultType="org.syc.dto.ReplyDTO">
+		select * from reply where rNo = #{rNo};
+	</select>
+	
+	<update id="freeBoardReplyModify">
+		update reply set rContent = #{rContent} where rNo = #{rNo}
+	</update>
+	
+	<delete id="freeBoardReplyRemove">
+		delete from reply where rNo = #{rNo};
+	</delete>
+	
+	<update id="freeBoardDetailPut">
+		update board set count = count+1 where bno= #{bno};
+	</update>
+</mapper>

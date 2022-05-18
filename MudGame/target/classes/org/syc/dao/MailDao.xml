@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.syc.dao.MailDao">
+	<select id="receiveMailBoxGet" resultType="org.syc.dto.MailDTO">
+		select * from mail where receiveId = #{id} order by regdate desc limit 15
+	</select>
+	<select id="receiveMailDetail" resultType="org.syc.dto.MailDTO">
+		select * from mail where mailNo = #{mailNo} 
+	</select>
+	
+	<select id="receiveSendMailDetail" resultType="org.syc.dto.MailDTO">
+		select * from sendMail where mailNo = #{mailNo} 
+	</select>
+	
+	<update id="readMail">
+		update mail set isRead = 1 where mailNo = #{mailNo}
+	</update>
+	
+	<update id="readSendMail">
+		update sendMail set isRead = 1 where mailNo = #{mailNo}
+	</update>
+	
+	<delete id="deleteMail">
+		delete from mail where mailNo = #{mailNo}
+	</delete>
+	
+	<delete id="deleteSendMail">
+		delete from sendMail where mailNo = #{mailNo}
+	</delete>
+	
+	<select id="sendMailBoxGet" resultType="org.syc.dto.MailDTO">
+		select * from sendMail where sendId = #{id} order by regdate desc limit 15
+	</select>
+	
+	<insert id="sendMail">
+		insert into mail(sendId,title,content,receiveId) values(#{sendId},#{title},#{content},#{receiveId});
+	</insert>
+	
+	<insert id="sentMail">
+		insert into sendMail(sendId,title,content,receiveId) values(#{sendId},#{title},#{content},#{receiveId});
+	</insert>
+	
+	
+	<update id="readMailAll">
+		update mail set isRead = 1 where receiveId = #{id};
+	</update>
+	
+	<update id="readSendMailAll">
+		update sendMail set isRead = 1 where receiveId = #{id};
+	</update>
+	
+	
+</mapper>

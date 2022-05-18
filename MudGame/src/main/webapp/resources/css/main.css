@@ -1,0 +1,626 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    overflow-y: hidden;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+button{
+	border:none;
+	outline: none;
+}
+
+button:hover{
+	cursor: pointer;
+}
+#wrap{
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+#header{
+    width: 100%;
+    height: 80px;
+    box-shadow: 4px 2px 2px  rgba(0,0,0,0.1);
+    min-width: 1440px;
+}
+
+
+.headerIn{
+    width: 1440px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerIn .logo a{
+    display: block;
+    width: 200px;
+    height: 80px;
+    background-image: url(../img/mainLogo.png);
+    background-size: 200px 80px;
+}
+
+.headerIn .mainMenu{
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.headerIn .mainMenu a{
+    color: #666;
+    font-size: 20px;
+}
+
+.headerIn .mainMenu li{
+    width: 250px;
+}
+
+.headerIn .mainMenu li a.on{
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(238, 238, 238,0.5);
+}
+
+.headerIn .subMenu{
+    padding-top: 5px;
+    text-align: center;
+    height: 350px;
+    width: 250px;
+    line-height: 1em;
+/*     background-image: url(../img/5.jpg); */
+/*     background-size: 250px 350px;  */
+/*     background-repeat: no-repeat; */
+    display: none;
+    position: sticky;
+    z-index: 10;
+    background-color: rgb(224,224,224)
+}
+
+.headerIn .subMenu a{
+    color: #222;
+    font-size: 16px;
+}
+
+.headerIn .subMenu li{
+    margin-bottom: 20px;
+}
+
+.headerIn .util{
+    margin-top: 50px;
+}
+
+.headerIn .util ul{
+    display: flex;
+}
+
+.headerIn .util a{
+    color: #222;
+    font-size: 16px;
+}
+
+.headerIn .util a:after{
+    content:"";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.headerIn .util li:last-child a::after{
+    display: none;
+}
+/* 헤더 끝 본문 시작 */
+
+.main{
+    display: flex;
+    width: 1440px;
+    justify-content: space-between;
+    min-width: 1440px;
+    max-width: 1920px;
+    margin: 10px auto 0 auto;
+    overflow: auto;
+}
+
+.main .game{
+    background-image: url(../img/phoneBg.png);
+    background-size: 750px 1000px;
+    background-position: -180px -90px;
+    background-repeat: no-repeat;
+    position:relative;
+    width: 25%;
+    height: 800px;
+    min-width: 350px;
+    min-height: 750px;
+    /* z-index: -100; */
+    /* display: none; */
+}
+
+.main .game .gameBg{
+    background-image: url(../img/gameBg.jpg);
+    background-repeat: no-repeat;
+    background-size: 260px 650px;
+    position: absolute;
+    top: 80px;
+    left: 65px;
+    width: 260px;
+    height: 650px;
+    
+}
+
+
+.screenshot{
+    width: 260px;
+    height: 50px;
+    border: 0;
+    background-color: rgba(204,204,204,0.5);
+
+}
+
+.screenshot:hover{
+    cursor: pointer;
+}
+
+.screenshotStart{
+	display:none;
+}
+
+.screenshotFont{
+	display: none;
+}
+
+
+.bigGame{
+    width: 75%;
+    height: 800px;
+    background-color: #ccc;
+    display: none;
+    margin-top: 10px;
+}
+/*메인 센터 영역*/
+tr{
+	height: 26px;
+	background-color: #f1f3f5;
+}
+
+a{
+	color: #222;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+.main .mainCenter{
+    margin: 60px 60px 0 60px;
+    width: 33%;
+    height: 800px;
+    /* display: none; */
+}
+
+.main .mainCenters{
+	height: 100%;
+}
+
+.main .chInfoTitle, .chStateTtile, .equipmentTitle, .equipmentTitle{
+	margin-top: 20px;
+	margin-bottom: 10px;
+   	text-align: center;
+   	background-color: rgb(46, 204, 113);
+   	font-size: 16px;
+}
+
+.main .chInfoUl, .chStateUl{
+	padding: 0 20px 0 20px;
+	font-size: 14px;
+}
+
+.main .chInfoUl li, .chStateUl li{
+	margin-bottom: 10px;
+}
+
+.main .maxExpBar{
+	width: 100%;
+	height: 20px;
+	background-color: #ccc;
+}
+
+.main .expBar{
+	height: 20px;
+	background-color: rgb(46, 204, 113);
+	white-space: nowrap;
+}
+
+
+.main .mainCenter .centerTop{
+    background-color: #ccc;
+    height: 25%;
+    margin-bottom: 20px;
+}
+
+.lankTable{
+	text-align: center;
+}
+
+.lankTitle{
+	width: 100%;
+	text-align: center;
+}
+
+.main .centerBottom{
+    display: flex;
+    height: 60%;
+}
+
+.main .centerBottom .character{
+    width: 50%;
+    background-color: rgb(224,224,224);
+    margin-right: 10px;
+}
+
+.main .centerBottom .equipment{
+    width: 50%;
+    background-color: rgb(224,224,224);
+    margin-left: 10px;
+}
+
+.equipmentTable{
+	width: 100%;
+}
+
+/* 스텟 로직 */
+.strPlus, .amrPlus, .strMinus, .amrMinus{
+	border: none;
+	background-color: rgb(224,224,224);
+	margin-left: 20px;
+	
+	vertical-align: top;
+}
+
+.strPlus, .amrPlus{
+	color: blue;
+	line-height: 20px;
+}
+
+.strMinus, .amrMinus{
+	color: red;
+	line-height: 20px;
+}
+
+
+.strPlus:hover, .amrPlus:hover, .strMinus:hover, .amrMinus:hover{
+	cursor: pointer;
+	
+}
+
+.stateOk{
+	width: 100%;
+	height: 30px;
+	border: none;
+}
+.stateOk:hover{
+	cursor: pointer;
+}
+/* 스텟 로직 끝*/
+.main .chInfo{
+	height: 50%;
+}
+
+.main .chat{
+    width: 20%;
+    margin-top: 4%;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+.main .chat .chatContent{
+    height: 90%;
+    background-color: #ccc;
+/*     background-image: url(../img/5.jpg); */
+    border: 0;
+    outline: 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding-top: 20px;
+}
+
+.main .chat .chatContent .chatText{
+    height: 96%;
+    width: 85%;
+    background-color: rgba(238, 238, 238,0.2);
+    background-size: cover;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.main .chat .chatInput{
+    height: 10%;
+    width: 100%;
+}
+
+.main .chat .chatInput .chatForm{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main .chat .chatInput .chatForm fieldset{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 0;
+    display: flex;
+    position: relative;
+    /* background-color: #ccc; */
+    background-image: url(../img/5.jpg);
+    background-size: cover;
+    padding: 10px 0;
+    border-radius: 10px;
+   
+}
+
+.main .chat .chatInput .chatForm .chatting{
+    width: 93%;
+    outline: 0;
+    border: 0;
+    background-color: rgba(238, 238, 238,0.3);
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding:0 20px;
+    margin-left: 10px;
+}
+
+.main .chat .chatInput .chatForm .chatEnter{
+    position: absolute;
+    right: 10px;
+    height: 63%;
+    margin-top: 2px;
+    margin-right: 2px;
+    width: 50px;
+    border-radius: 8px;
+    border: 0;
+    background-color: rgba(204,204,204,0.7);
+
+    box-sizing: border-box;
+}
+
+.main .chat .chatInput .chatForm .chatEnter:hover{
+    cursor: pointer;
+}
+
+#footer{
+    /* position: inherit; */
+    /* width: 100%;
+    background-color: rgba(1,1,1,0.5); */
+    height: auto;
+    min-width: 1440px;
+    box-shadow: 4px 20px 50px rgb(0 0 0 / 10%);
+    
+}
+
+.footerIn{
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    color: #222;
+}
+
+
+
+/* 모달창 */
+
+.login{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 4px  2px 2px #ccc;
+    display: none;
+    z-index: 700;
+    opacity: 1;
+}
+
+.login .loginClose{
+    position:absolute;
+    top: -25px;
+    right:-25px;
+}
+
+.login .loginClose a{
+    display: inline-block;
+    color: #fff;
+    background-color: #222;
+    padding: 8px;
+    line-height: 1em;
+    font-size: 12px;
+    border-radius: 50%;
+}
+
+.login .titleColor{
+    width: 200px;
+    height: 10px;
+    margin: 0 auto;
+    background-color: #eb6c5b;
+    margin-bottom: 15px;
+}
+
+.login .loginTxt{
+    text-align: center;
+    color: #eb6c5b;
+    font-size: 22px;
+    line-height:1em;
+    margin-bottom: 40px;
+}
+
+.loginForm fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border: 0;
+}
+
+.loginForm .loginInput{
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #eeeeee;
+    border: 2px solid #dfdfdf;
+    text-align: center;
+    border-radius: 8px;
+    outline: none;
+}
+
+.loginForm .userPw{
+    margin-bottom: 40px;
+}
+
+.loginForm .loginBtn{
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #eb6c5b;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+}
+/* 로그인 영역 끝 */
+
+/* 회원가입 영역 */
+.join{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    width: 400px;
+    height: 430px;
+    background-color: #fff;
+    box-shadow: 4px  2px 2px #ccc;
+    display: none;
+    z-index: 700;
+}
+
+.join .joinClose{
+    position:absolute;
+    top: -25px;
+    right:-25px;
+}
+
+.join .joinClose a{
+    display: inline-block;
+    color: #fff;
+    background-color: #222;
+    padding: 8px;
+    line-height: 1em;
+    font-size: 12px;
+    border-radius: 50%;
+}
+
+.join .titleColor{
+    width: 200px;
+    height: 10px;
+    margin: 0 auto;
+    background-color: #eb6c5b;
+    margin-bottom: 5px;
+}
+
+.join .joinTxt{
+    text-align: center;
+    color: #eb6c5b;
+    font-size: 22px;
+    line-height:1em;
+    margin-bottom: 40px;
+}
+
+.joinForm fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border: 0;
+}
+
+.joinForm .joinInput{
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #eeeeee;
+    border: 2px solid #dfdfdf;
+    text-align: center;
+    border-radius: 8px;
+    outline: none;
+}
+
+.joinForm .userPw{
+    margin-bottom: 40px;
+}
+
+.joinForm .joinBtn{
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #eb6c5b;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.check{
+    text-align: center;
+    display: none;
+    margin-bottom: 10px;
+    color: red;
+    font-size: 12px;
+}
+
+
+/* 회원가입 영역끝 */
+
+@media screen and (max-width:768px){
+    
+    .login .loginClose{
+        top: 0px;
+        right:20px;
+    }
+}

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.remittance{
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.recipient{
+	width: 80%;
+	padding-left: 5px; 
+	outline: none;
+	box-sizing: border-box;
+	border: 1px solid #222;
+}
+
+.overlapButton{
+	width: 15%;
+	height: 30px;
+}
+
+.cancleButton{
+	display:none;
+	height: 30px;
+	width: 15%;
+}
+
+
+.remittanceMoney{
+	margin-top: 10px;
+	height: 30px;
+	display: none;
+	width: 180px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.sendMoney{
+	height: 25px;
+	padding: 5px;
+	line-height: 1em;
+}
